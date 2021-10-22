@@ -1,0 +1,19 @@
+.game-item {
+    width: 200px;
+}
+.game-item img {
+    width:  100%;
+}
+.game-item h2 {
+
+}
+.game-item p {
+
+}
+.game-item a {
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    background-color: #ccc;
+    color: black;
+}
