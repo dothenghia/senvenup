@@ -53,20 +53,7 @@
     cursor: pointer;
     text-shadow: 2px 2px var(--button-color);
 }
-.nav-button-sub {
-    /* position: relative; */
-}
-/* .nav-button-sub::after {
-    content: "";
-    width: 100px;
-    height: 20px;
-    position: absolute;
-    top: calc(100% - 15px);
-    left: 70px;
-    background-color: transparent;
-    
 
-} */
 .nav-button-sub:hover .subnav {
     display: block;
 }
