@@ -10,3 +10,39 @@
     --subnav-line-height : 4px;
     
 }
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: 10px;
+}
+
+.grid__column-2 {
+    width: calc((100% / 12) * 2);
+    padding: 0 5px;
+
+}
+
+.grid__column-10 {
+    width: calc((100% / 12) * 10);
+    padding: 0 5px;
+}
+
+.grid__column-2-of-10 {
+    width: 20%;
+    padding: 0 5px;
+    margin-bottom: 10px;
+
+}
