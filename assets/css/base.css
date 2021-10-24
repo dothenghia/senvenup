@@ -1,0 +1,12 @@
+:root {
+    --white-color : #fff;
+    --black-color : #000;
+    --background-color : #00023a;
+    --button-color : #07e1ff;
+    
+    --header-height : 52px;
+    --header-button-height : 44px;
+    --subnav-height : 48px;
+    --subnav-line-height : 4px;
+    
+}
