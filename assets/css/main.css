@@ -20,19 +20,20 @@
     right: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #40416b;
     padding: 0px 20px;
     z-index: 1;
 }
 
-#nav {
+.nav-list {
     width: 100%;
     display: flex;
     align-items: center;
     list-style-type: none;
 }
-#nav li {
-    margin: 0 6px;
+.nav-list li {
+    margin: 0 10px;
 }
 .nav-logo {
     display: flex;
@@ -52,6 +53,7 @@
     cursor: pointer;
     text-shadow: 2px 2px var(--button-color);
 }
+
 .nav-button-sub:hover .subnav {
     display: block;
 }
@@ -101,11 +103,11 @@
 .nav-search-input {
     height: 38px;
     border-radius: 30px;
-    border: 3px solid var(--white-color);
+    margin-left: 10px !important;
+    border: 2px solid var(--white-color);
     background-color: transparent;
     overflow: hidden;
     flex: 1;
-    
 }
 .nav-search-input input {
     height: 100%;
@@ -131,22 +133,50 @@
 /* ============ BODY ============= */
 #body {
     height: 1500px;
-    z-index: -2;
-
+    background-color: var(--background-color);
 }
 
 #slider {
+    background-color: var(--background-color);
     margin-top: var(--header-height);
-    padding-bottom: 40%;
-    z-index: -1;
-    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
-#slider .image-container {
-    position: absolute;
+@keyframes slide_animation {
+    0% {left:0px;}
+    7.4074% {left:0px;}
+    14.8148% {left:1200px;}
+    33.3333% {left:1200px;}
+    40.7407% {left: 2400px;}
+    59.2592% {left: 2400px;}
+    66.6666% {left: 3600px;}
+    85.1852% {left: 3600px;}
+    92.5926% {left: 4800px;}
+    100% {left: 4800px}
+
 }
-#slider .image-container:hover {
-    cursor: pointer;
+
+.slider-container {
+    width: 6000px;
+    height: 500px;
+    margin: 0 0 0 -4800px;
+    position: relative;
+    animation-name: slide_animation ;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+#slider .image-container {
+    height: 500px;
+    width: 1200px;
+    position: relative;
+    float: left;
 }
 #slider .image-container img{
     width: 100%;
@@ -164,7 +194,9 @@
 
 #side-bar {
     height: 500px;
-    background-color: #444;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 #content {
@@ -179,6 +211,3 @@
 #footer {
 
 }
-
-
-

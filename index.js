@@ -5,12 +5,12 @@ const $i = document.getElementById.bind(document);
 
 //////////// Sub Navigation List ///////////
 const subnavItems = $$(".subnav-item");
-const subnavItemActived = $(".subnav-item.subnav-active");
+const subnavItemActived = $(".nav-button-sub .subnav-item.subnav-active");
 const subnavLine = $(".subnav-line");
 
-subnavLine.style.left = subnavItemActived.offsetLeft + 'px';
-subnavLine.style.width = subnavItemActived.offsetWidth + 'px';
-
+subnavLine.style.left = "0px";
+subnavLine.style.width = "68px";
+console.log(subnavItemActived)
 subnavItems.forEach((subnavItem)=>{
     subnavItem.onclick = function(){
         $(".subnav-item.subnav-active").classList.remove("subnav-active");
@@ -21,21 +21,19 @@ subnavItems.forEach((subnavItem)=>{
 })
 
 
-///////////// Slider ///////////////////
-var slideIndex = 0;
-slideShow();
+// ///////////// Slider ///////////////////
+// var slideIndex = 0;
+// slideShow();
 
-function slideShow(){
-    const slides = $c("image-container");
-    for (const slide of slides) {
-        slide.style.display = "none";
-    }
-    slideIndex++;
-    if(slideIndex> slides.length){
-        slideIndex = 1;
-    }
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(slideShow,3000);
-}
-
-
+// function slideShow(){
+//     const slides = $c("image-container");
+//     for (const slide of slides) {
+//         slide.style.display = "none";
+//     }
+//     slideIndex++;
+//     if(slideIndex> slides.length){
+//         slideIndex = 1;
+//     }
+//     slides[slideIndex-1].style.display = "block";
+//     setTimeout(slideShow,3000);
+// }
