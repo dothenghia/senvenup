@@ -194,12 +194,62 @@
 
 #side-bar {
     height: 500px;
-    background-color: transparent;
     position: relative;
-    z-index: 1;
+}
+.category-title {
+    padding: 5px ;
+    margin: 4px 10px 0;
+    border-bottom: 1px solid white;
+}
+.category-title p {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 500;
 }
 
-#content {
+.category-list {
+    list-style-type: none;
+    padding: 8px;
+}
+
+.category-item {
+    color: var(--button-color);
+    padding: 6px;
+    margin-bottom: 4px;
+}
+.category-item:hover {
+    cursor: pointer;
+    color: white;
+    transform: translateX(6px);
+}
+
+
+#game-container {
+    background-color: #ccc;
+
+}
+
+.game-item {
+    width: 120px;
+}
+
+.game-thumbnail img{
+    width: 100%;
+}
+
+.game-content {
+
+}
+
+.game-name {
+
+}
+
+.game-download-count {
+
+}
+
+.game-producer {
 
 }
 
