@@ -182,32 +182,127 @@
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
+/*============= Content =============*/
 
 #side-bar {
     height: 500px;
-    background-color: transparent;
     position: relative;
-    z-index: 1;
+}
+.category-title {
+    padding: 5px ;
+    margin: 4px 10px 0;
+    border-bottom: 1px solid white;
+}
+.category-title p {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 500;
 }
 
-#content {
+.category-list {
+    list-style-type: none;
+    padding: 8px;
+}
+
+.category-item {
+    color: var(--button-color);
+    padding: 8px;
 
 }
+.category-item:hover {
+    cursor: pointer;
+    color: white;
+    transform: translateX(6px);
+}
+
+
+#game-container {
+    
+
+}
+
+/* =========== GAME ITEM ============= */
+.game-item {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    border-radius: 6px;
+    overflow: hidden;
+    
+    transition: top ease 0.1s;
+    top:0;
+
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+.game-item:hover {
+    top: -1px;
+}
+
+.game-thumbnail {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game-content {
+    padding: 8px 10px;
+}
+
+.game-name {
+    font-size: 16px;
+    color: #000;
+
+}
+
+.game-description {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--description-color);
+    height: 32px;
+    line-height: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.game-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.game-price {
+    color: var(--white-color);
+    background-color: var(--price-background-color);
+    padding: 2px 5px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 4px;
+}
+
+.game-download-count {
+    font-size: 14px;
+    color: black;
+}
+
+
+.game-producer {
+    float: right;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: black;
+}
+
+
+
+
 
 /* ============ FOOTER ============= */
 
 #footer {
 
 }
-
-
-
