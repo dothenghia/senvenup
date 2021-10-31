@@ -1,2 +1,2 @@
 # senvenup
-https://dothenghia.github.io/senvenup/
+Visit the website at https://dothenghia.github.io/senvenup/

@@ -5,14 +5,22 @@
     --button-color : #07e1ff;
     --description-color : #333;
     --price-background-color :#222499;
+
     
     --header-height : 52px;
     --header-button-height : 44px;
     --subnav-height : 48px;
     --subnav-line-height : 4px;
 
+    /* Product Page */
     --product-image-size: 460px;
+
+    /* Login Signup Page */
+    --login-header-height : 70px;
+    --signup-header-height : 60px;
     
+
+
 }
 
 .grid {
@@ -29,7 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -5px;
-    margin-right: -5px;
+    margin-right: -8px;
     margin-top: 10px;
 }
 
@@ -45,8 +53,8 @@
 }
 
 .grid__column-2-of-10 {
-    width: 20%;
-    padding: 0 5px;
-    margin-bottom: 10px;
+    width: 25%;
+    padding: 0 8px;
+    margin-bottom: 16px;
 
 }

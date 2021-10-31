@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-main,.signup-main {
+    width: 100%;
+}
+
+/* Begin Modal */
+#login-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* ===== Begin Header ====== */
+#login-header {
+    width: 100%;
+    height: var(--login-header-height);
+    background-color: rgba(34, 34, 34, 0.8);
+
+}
+
+.login-header-container {
+    width: 100%;
+    height: var(--login-header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-header_left {
+    display: flex;
+    align-items: center;
+
+}
+
+.login-header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+}
+.login-header-logo img{
+    width: 50px;
+}
+
+.login-header-title {
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 26px;
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+.login-header_right {
+
+}
+
+.login-header-help {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px;
+}
+.login-header-help:hover {
+    text-shadow: 2px 2px var(--button-color);
+}
+
+/* ===== End Header ====== */
+
+/* ===== Begin Body ====== */
+
+
+#login-body {
+    height: calc(100% - var(--login-header-height));
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.login-body-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.login-body-logo {
+
+}
+
+.login-body-logo img {
+    width: 460px;
+}
+
+.login-form-container {
+    width: 460px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.form-heading {
+    padding: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.form-body {
+    padding: 0 30px 30px 30px;
+}
+
+.form-input {
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid #fff;
+
+}
+
+.form-control {
+    height: 100%;
+    width: 100%;
+    padding-left: 8px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    
+
+}
+
+.form-login-signup {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: var(--button-color);
+    opacity: 0.9;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.form-login-signup:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.forget-pass {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+
+}
+
+
+.form-footer {
+    padding: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-top: 1px solid #fff;
+}
+
+.form-footer--switch {
+    color: rgb(136, 136, 136);
+    text-align: center;
+}
+.form-footer--switch a{
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+
+
+
+.form-input--policy {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+.form-checkbox-policy {
+    margin-right: 5px;
+}
+
+.form-policy {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.4px;
+}
+.form-policy-link {
+    color: var(--button-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ===== End Body ====== */
+
+
+#login-footer {
+
+}
+
+
+
+/* End Modal */
+
+
+/******* Begin Background Slider ******/
+
+#login-slider-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+@keyframes slide_animation {
+    0% {left:0%;}
+    7.4074% {left:0%;}
+    14.8148% {left:100%;}
+    33.3333% {left:100%;}
+    40.7407% {left: 200%;}
+    59.2592% {left: 200%;}
+    66.6666% {left: 300%;}
+    85.1852% {left: 300%;}
+    92.5926% {left: 400%;}
+    100% {left: 400%}
+
+}
+.slider-background-container {
+    width: 500%;
+    height: 100%;
+    margin: 0 0 0 -400%;
+    position: relative;
+    animation-name: slide_animation ;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.image-container {
+    position: relative;
+    width: 20%;
+    padding-top: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+/* .image-container img {
+    width: 100%;
+} */

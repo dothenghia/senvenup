@@ -6,9 +6,12 @@
 }
 
 #main {
-
 }
 
+body {
+    background-color: var(--background-color);
+
+}
 /* ============ HEADER ============= */
 
 #header {
@@ -21,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #40416b;
+    background-color: rgba(255, 255, 255, 0.25);
     padding: 0px 20px;
     z-index: 1;
 }
@@ -48,6 +51,10 @@
     font-size: 16px;
     font-weight: 500;
     line-height: var(--header-height);
+}
+.nav-button a{
+    color: var(--white-color);
+    text-decoration: none;
 }
 .nav-button:hover {
     cursor: pointer;
@@ -138,7 +145,7 @@
 
 #slider {
     background-color: var(--background-color);
-    margin-top: var(--header-height);
+    margin-top: calc(var(--header-height) + 43px);
     overflow: hidden;
     max-width: 1200px;
     width: 100%;
@@ -189,8 +196,8 @@
     position: relative;
 }
 .category-title {
-    padding: 5px ;
-    margin: 4px 10px 0;
+    padding: 5px 0 8px 14px;
+    margin: 4px 10px 0 0;
     border-bottom: 1px solid white;
 }
 .category-title p {
@@ -251,14 +258,14 @@
 }
 
 .game-name {
-    font-size: 16px;
+    font-size: 18px;
     color: #000;
 
 }
 
 .game-description {
     margin-top: 4px;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--description-color);
     height: 32px;
     line-height: 16px;
