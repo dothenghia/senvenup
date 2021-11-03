@@ -1,13 +1,13 @@
 :root {
     --white-color : #fff;
     --black-color : #000;
-    --background-color : #00023a;
+    --background-color : #f0f0f0;
     --button-color : #07e1ff;
     --description-color : #333;
     --price-background-color :#222499;
 
     
-    --header-height : 52px;
+    --header-height : 54px;
     --header-button-height : 44px;
     --subnav-height : 48px;
     --subnav-line-height : 4px;

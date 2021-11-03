@@ -3,6 +3,17 @@ const $$ = document.querySelectorAll.bind(document);
 const $c = document.getElementsByClassName.bind(document);
 const $i = document.getElementById.bind(document);
 
+                    //////////// TO DO LIST /////////////////////////////////////
+                    // 1. Restruct Game page ( game page )
+                    // 2. Filter category bar ( home page )
+                    // 3. Search game ( header nav bar --> another search page )
+                    // 4. Sign up, Sign in Logic ( users data )
+                    // 5. User page ( waiting design )
+                    // 6. Responsive 
+                    // 7. Footer
+                    // 8. 
+                    // 9. 
+
 //////////// Sub Navigation List ///////////
 const subnavItems = $$(".subnav-item");
 const subnavItemActived = $(".nav-button-sub .subnav-item.subnav-active");
