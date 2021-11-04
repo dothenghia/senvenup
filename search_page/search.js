@@ -3,16 +3,6 @@ const $$ = document.querySelectorAll.bind(document);
 const $c = document.getElementsByClassName.bind(document);
 const $i = document.getElementById.bind(document);
 
-                    //////////// TO DO LIST /////////////////////////////////////
-                    // 1. Restruct Game page ( game page )
-                    // 2. Filter category bar ( home page )     /
-                    // 3. Search game ( header nav bar --> another search page )
-                    // 4. Sign up, Sign in Logic ( users data )
-                    // 5. User page ( waiting design )
-                    // 6. Responsive 
-                    // 7. Footer
-                    // 8. 
-                    // 9. 
 var gameIdStorage = 1;
 
 //////////// Sub Navigation List ///////////
@@ -30,11 +20,6 @@ subnavItems.forEach((subnavItem)=>{
         subnavLine.style.width = subnavItem.offsetWidth + 'px';
     }
 })
-
-
-
-
-
 
 
 // ////////////////// Game ////////////////// //
@@ -129,12 +114,32 @@ const app = {
         }
     ],
 
-    //Render game to index.html UI
-    render : function (){
-        var htmlIndex = this.games.map((game,index)=>{
-            return `<div class="grid__column-2-of-10">
-            <a class="game-item" id="game-id-${game.id}" href="./game_page/game.html">
-                <div class="game-thumbnail" style="background-image: url(./assets/image/game/${game.image});"></div>
+    render : function(){
+        var localInput = localStorage.getItem('localNameSearch');
+
+
+        $(".search-result-box").innerHTML = `<p class="search-result">Search results for '${localInput}'</p>
+        <a href="../index.html" class="search-all-games">Browse all games</a>`;
+        
+
+        var getNameArray = app.games.map((game)=>{
+            return game.name.toLowerCase()
+        })
+
+        var getNameByComparing = getNameArray.filter((gamename)=>{
+            return gamename.includes(localInput.toLowerCase());
+        })
+
+        var getGamesByName = app.games.filter((game)=>{
+            return getNameByComparing.some((gameName)=>{
+                return gameName == game.name.toLowerCase();
+            })
+        })
+
+        var htmlIndex = getGamesByName.map((game,index)=>{
+            return `<div class="grid__column-2-of-12">
+            <a class="game-item" id="game-id-${game.id}" href="../game_page/game.html">
+                <div class="game-thumbnail" style="background-image: url(../assets/image/game/${game.image});"></div>
                 <div class="game-content">
                     <h2 class="game-name">${game.name}</h2>
                     <p class="game-description">${game.description}</p>
@@ -150,7 +155,7 @@ const app = {
         </div>`;
         });
 
-        $("#game-container .grid__row").innerHTML = htmlIndex.join("");
+        $(".search-container .grid__row:last-child").innerHTML = htmlIndex.join("");
 
         // Luu id của thẻ a game vào biến gameIdStorage lưu vào biến Local Storage 'localId'
         const gameItems = document.querySelectorAll(".game-item");
@@ -162,63 +167,6 @@ const app = {
                 localStorage.setItem('localId', gameIdStorage);
             }
         }
-
-    },
-
-    filterCategory : function (){
-        ////////// Category List Active ///////////
-        const categoryItems = $$(".category-item");
-        for (var categoryItem of categoryItems){
-            categoryItem.onclick = function (){
-                $(".category-item.category-item-actived").classList.remove("category-item-actived");
-                this.classList.add("category-item-actived");
-
-                var currentTag = this.innerHTML;
-
-                if (currentTag == "All"){
-                    app.render();
-                }else{
-                    var getGameByTag = app.games.filter((game)=>{
-                        return game.category.some((tag)=>{
-                            return currentTag == tag;
-                        });
-                    })
-    
-                    var htmlIndex = getGameByTag.map((game)=>{
-                        return `<div class="grid__column-2-of-10">
-                        <a class="game-item" id="game-id-${game.id}" href="./game_page/game.html">
-                            <div class="game-thumbnail" style="background-image: url(./assets/image/game/${game.image});"></div>
-                            <div class="game-content">
-                                <h2 class="game-name">${game.name}</h2>
-                                <p class="game-description">${game.description}</p>
-                                <div class="game-detail">
-                                    <h4 class="game-price">Free</h4>
-                                    <p class="game-download-count">${game.download}
-                                        <i class="ti-download"></i>
-                                    </p>
-                                </div>
-                                <h3 class="game-producer">${game.author}</h3>
-                            </div>
-                        </a>
-                    </div>`;
-                    });
-            
-                    $("#game-container .grid__row").innerHTML = htmlIndex.join("");
-                    
-                    
-                    // Luu id của thẻ a game vào biến gameIdStorage lưu vào biến Local Storage 'localId'
-                    const gameItems = document.querySelectorAll(".game-item");
-                    for ( var gameItem of gameItems) {
-                        gameItem.onclick = function(){
-                            var idremove = this.id.replace("game-id-","")
-                            gameIdStorage = idremove;
-
-                            localStorage.setItem('localId', gameIdStorage);
-                        }
-                    }
-                }
-            }
-        }
     },
 
     searchByInput : function(){
@@ -226,74 +174,15 @@ const app = {
         var inputSearchButton = $(".nav-search-button")
 
         inputSearchButton.onclick = function(){
-            var inputValue = $(".nav-search-input input").value;
+            var inputValue = $(".nav-search-input--input").value;
             localStorage.setItem('localNameSearch', inputValue);
         }
-
-
-        // inputSearch.onkeydown = function(e){
-        //     var keycode = e ? e.which : window.event.keyCode;
-        //     console.log(keycode)
-
-        //     if (keycode =='13'){
-        //         var inputValue = $(".nav-search-input input").value;
-        //         var getNameArray = app.games.map((game)=>{
-        //             return game.name.toLowerCase()
-        //         })
-
-        //         var getNameByComparing = getNameArray.filter((gamename)=>{
-        //             return gamename.includes(inputValue);
-        //         })
-
-        //         var getGamesByName = app.games.filter((game)=>{
-        //             return getNameByComparing.some((gameName)=>{
-        //                 return gameName == game.name.toLowerCase();
-        //             })
-        //         })
-
-        //         $i("nav-search-input--input").value = '';
-
-        //         var htmlIndex = getGamesByName.map((game,index)=>{
-        //             return `<div class="grid__column-2-of-10">
-        //             <a class="game-item" id="game-id-${game.id}" href="./game_page/game.html">
-        //                 <div class="game-thumbnail" style="background-image: url(./assets/image/game/${game.image});"></div>
-        //                 <div class="game-content">
-        //                     <h2 class="game-name">${game.name}</h2>
-        //                     <p class="game-description">${game.description}</p>
-        //                     <div class="game-detail">
-        //                         <h4 class="game-price">Free</h4>
-        //                         <p class="game-download-count">${game.download}
-        //                             <i class="ti-download"></i>
-        //                         </p>
-        //                     </div>
-        //                     <h3 class="game-producer">${game.author}</h3>
-        //                 </div>
-        //             </a>
-        //         </div>`;
-        //         });
-        
-        //         $("#game-container .grid__row").innerHTML = htmlIndex.join("");
-        
-        //         // Luu id của thẻ a game vào biến gameIdStorage lưu vào biến Local Storage 'localId'
-        //         const gameItems = document.querySelectorAll(".game-item");
-        //         for ( var gameItem of gameItems) {
-        //             gameItem.onclick = function(){
-        //                 var idremove = this.id.replace("game-id-","")
-        //                 gameIdStorage = idremove;
-        
-        //                 localStorage.setItem('localId', gameIdStorage);
-        //             }
-        //         }
-        //     }
-        // }
     },
 
 
     //Start , chứa những function khác
     start : function (){
         this.render();
-        this.filterCategory();
-        this.searchByInput();
     }
 
 

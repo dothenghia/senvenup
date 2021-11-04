@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: linear-gradient(335deg, var(--background-color-1) ,var(--background-color-2) ) ;
+    background-image: linear-gradient(335deg, var(--background-color-1) ,var(--background-color-2) , var(--background-color-3)) ;
 }
 /* ============ HEADER ============= */
 
@@ -131,6 +131,7 @@ body {
     color: var(--white-color);
     font-weight: 700;
     font-size: 22px;
+    text-decoration: none;
 }
 .nav-search-icon:hover {
     cursor: pointer;
@@ -215,10 +216,9 @@ body {
 .category-item.category-item-actived {
     color: var(--primary-color);
     padding-left: 20px;
-    right: 0px;
 }
 .category-item.category-item-actived:hover {
-    right: 0px;
+
 }
 
 .category-item.category-item-actived::after {

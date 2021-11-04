@@ -143,9 +143,20 @@ const app = {
 
     },
 
+    searchByInput : function(){
+        var inputSearch = $(".nav-search-input input")
+        var inputSearchButton = $(".nav-search-button")
+
+        inputSearchButton.onclick = function(){
+            var inputValue = $(".nav-search-input input").value;
+            localStorage.setItem('localNameSearch', inputValue);
+        }
+    },
+
 
     start : function (){
         this.render();
+        this.searchByInput();
     }
 
 

@@ -1,0 +1,31 @@
+.search-container {
+
+}
+
+.search-result-box {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 8px 6px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.search-result {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.search-all-games {
+    font-size: 18px;
+    text-decoration: none;
+    background-color: var(--price-background-color);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+
+}
