@@ -11,7 +11,7 @@ const subnavItemActived = $(".nav-button-sub .subnav-item.subnav-active");
 const subnavLine = $(".subnav-line");
 
 subnavLine.style.left = "0px";
-subnavLine.style.width = "68px";
+subnavLine.style.width = "76px";
 subnavItems.forEach((subnavItem)=>{
     subnavItem.onclick = function(){
         $(".subnav-item.subnav-active").classList.remove("subnav-active");
