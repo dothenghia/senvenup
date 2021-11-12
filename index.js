@@ -6,7 +6,7 @@ const $i = document.getElementById.bind(document);
                     //////////// TO DO LIST /////////////////////////////////////
                     // 1. Restruct Game page ( game page )
                     // 2. Filter category bar ( home page )     /
-                    // 3. Search game ( header nav bar --> another search page )
+                    // 3. Search game ( header nav bar --> another search page ) /
                     // 4. Sign up, Sign in Logic ( users data )
                     // 5. User page ( waiting design )
                     // 6. Responsive 
