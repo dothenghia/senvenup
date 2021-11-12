@@ -4,11 +4,13 @@ const $c = document.getElementsByClassName.bind(document);
 const $i = document.getElementById.bind(document);
 
                     //////////// TO DO LIST /////////////////////////////////////
-                    // 1. Restruct Game page ( game page )
+                    // 1. Restruct Game page ( game page )  /
                     // 2. Filter category bar ( home page )     /
                     // 3. Search game ( header nav bar --> another search page ) /
                     // 4. Sign up, Sign in Logic ( users data )
+                    // 4. Game page comment ( restruct data )
                     // 5. User page ( waiting design )
+                    // 4. Add Slider game + Search-tag Title
                     // 6. Responsive 
                     // 7. Footer
                     // 8. 
@@ -21,7 +23,7 @@ const subnavItemActived = $(".nav-button-sub .subnav-item.subnav-active");
 const subnavLine = $(".subnav-line");
 
 subnavLine.style.left = "0px";
-subnavLine.style.width = "68px";
+subnavLine.style.width = "76px";
 subnavItems.forEach((subnavItem)=>{
     subnavItem.onclick = function(){
         $(".subnav-item.subnav-active").classList.remove("subnav-active");

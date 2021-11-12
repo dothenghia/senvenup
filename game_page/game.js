@@ -11,7 +11,7 @@ const subnavItemActived = $(".nav-button-sub .subnav-item.subnav-active");
 const subnavLine = $(".subnav-line");
 
 subnavLine.style.left = "0px";
-subnavLine.style.width = "68px";
+subnavLine.style.width = "76px";
 subnavItems.forEach((subnavItem)=>{
     subnavItem.onclick = function(){
         $(".subnav-item.subnav-active").classList.remove("subnav-active");
@@ -29,10 +29,10 @@ const app = {
             image : "1.ASimpleTest.png",
             name : "A Simple Test",
             author : "Ben Bonk",
-            description : ` A Simple Test is a very simple test provided by Oxcorp. Complete the trials correctly to potentially be accepted into the Oxcorp candidate program. Do not try to explore the test. Complete it, and move on with your life.
-            \nPlease play with audio on for the intended experience. Press space to skip narration if needed.
-            \nCode, Art, Narration, Writing, Trial Designer, and Creative Visionary  - BenBonk
-            `,
+            description : " A Simple Test is a very simple test provided by Oxcorp. Complete the trials correctly to potentially be accepted into the Oxcorp candidate program. Do not try to explore the test. Complete it, and move on with your life.\
+            Please play with audio on for the intended experience. Press space to skip narration if needed. \
+            nCode, Art, Narration, Writing, Trial Designer, and Creative Visionary  - BenBonk\
+            ",
             category : [ "Interactive", "Stimulation", "Fiction", "Adventure"],
             download : "1.234.111",
             link : "https://benbonk.itch.io/a-simple-test",
@@ -126,6 +126,7 @@ const app = {
 
                 
         $(".product-container").innerHTML = `
+        <div class="product-information-header">
             <div class="product-image" >
                 <img src="../assets/image/game/${getGamebyId.image}" alt="">
             </div>
@@ -133,13 +134,40 @@ const app = {
             <div class="product-content">
                 <div class="product-information">
                     <h4 class="product-name">${getGamebyId.name}</h4>
+                    <div class="product-flex-box">
+                        <p class="product-author">${getGamebyId.author}</p>
+                        <div class="product-flex-box-2">
+                            <p class="product-download-count">${getGamebyId.download}
+                                <i class="fas fa-cloud-download-alt"></i>
+                            </p>
+                            <span class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                    </span>
+                        </div>
+                    </div>
+                    <p class="product-category">Category : <em>${getCategoryOfGame.join(", ")}</em></p>
                     <p class="product-price">Free</p>
-                    <p class="product-description">${getGamebyId.description}</p>
-                    <p class="product-category">Category : ${getCategoryOfGame.join(", ")}</p>
                 </div>
 
-                <a href="${getGamebyId.link}" class="product-download-link">Download</a>
-            </div>`;
+                <a href="${getGamebyId.link}" class="product-download-link">Download 
+                <i class="ti-download"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="product-description">
+            <p class="product-description-1">      ${getGamebyId.description}</p>
+            <p class="product-description-1">${getGamebyId.description}</p>
+            <div class="product-description-image">
+                <img src="../assets/image/game/${getGamebyId.image}" alt="">
+            </div>
+            <p class="product-description-2">${getGamebyId.description}</p>
+            <p class="product-description-2">${getGamebyId.description}</p>
+        </div>`;
 
     },
 
