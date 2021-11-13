@@ -9,6 +9,8 @@
     --primary-color : #01d2ee;
     --description-color : #333;
     --price-background-color :#222499;
+    --footer-text-color : rgba(255,255,255,0.9);
+    --footer-hover-color : rgba(255,255,255,0.3);
 
     
     --header-height : 54px;
