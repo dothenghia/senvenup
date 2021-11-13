@@ -5,21 +5,21 @@ This is our first project in Introduction to Information Technology
 _Visit the website at : https://dothenghia.github.io/senvenup/_
 
 
-##Team members
+## Team members
 
-###Team Front-end
+### Team Front-end
 
 - Đỗ Thế Nghĩa (21127367)
 
 _Email : dtnghia21@clc.fitus.edu.vn_
 
-###Team Design UI
+### Team Design UI
 
 - Nguyễn Công Khanh (21127071)
 
 _Email : nckhanh21@clc.fitus.edu.vn_
 
-###Team Design UI
+### Team Design UI
 
 - Trần Đại Niên (21127664)
 
@@ -33,23 +33,26 @@ _Email : nkhy21@clc.fitus.edu.vn_
 
 _Email : bpthien21@clc.fitus.edu.vn_
 
-##Website Preview
+## Website Preview
 
-###Home Page
+### Home Page
 
 ![Home Page](https://user-images.githubusercontent.com/63101932/141608929-73dd2f34-2fe2-4b2f-bfcd-fc11f5b733c2.png)
 
-###Game Page
+### Game Page
 
 ![Game Page](https://user-images.githubusercontent.com/63101932/141609163-e30d6d1b-bad7-48fd-a22b-98b8869a969d.png)
 
-###Search Page
+### Search Page
 
 ![Search Page](https://user-images.githubusercontent.com/63101932/141609175-672e241c-27c7-4e11-a885-ed932f87ed88.png)
 
-###Log in/Sign up Page
+### Log in/Sign up Page
 
 ![Login](https://user-images.githubusercontent.com/63101932/141609203-00ca9382-28b2-4d61-b737-3d6c852d9c32.png)
+
+
+**This project is just for learning, not for making money**
 
 ---
 
