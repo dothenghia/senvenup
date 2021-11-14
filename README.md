@@ -19,7 +19,7 @@ _Email : dtnghia21@clc.fitus.edu.vn_
 
 _Email : nckhanh21@clc.fitus.edu.vn_
 
-### Team Design UI
+### Team Collect Data
 
 - Trần Đại Niên (21127664)
 

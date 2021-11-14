@@ -47,17 +47,20 @@
                         <div class="login-form-container">
                             <p class="form-heading">Login</p>
                             
-                            <div class="form-body">
+                            <div class="form-body ">
                                 <form action="">
                                     <div class="form-input">
-                                        <input type="text" class="form-control" placeholder="Email/Phone number/User name" required>
+                                        <input type="text" class="form-control form-user" placeholder="User name" required>
                                     </div>
+
                                     <div class="form-input">
-                                        <input type="password" class="form-control" placeholder="Password" required>
+                                        <input type="password" class="form-control form-password" placeholder="Password" required>
                                     </div>
+                                    <p class="form-message">User name or Password is incorrect</p>
                                     
-                                    <button class="form-login-signup">Login</button>
-                                    
+                                    <div class="form-submit-button">
+                                        <a href="../index.html" type="submit" class="form-login-signup" id="form-login-signup">Login</a>
+                                    </div>                                    
                                     <p class="forget-pass">Forget password</p>
                                 </form>
                             </div>
@@ -101,5 +104,7 @@
 
 
     </div>
+
+    <script src="./user.js"></script>
 </body>
 </html>

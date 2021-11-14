@@ -35,6 +35,15 @@ body {
     align-items: center;
     list-style-type: none;
 }
+.role--admin .nav-button-sub{
+    display: none;
+}
+.role--user .nav-login-button,
+.role--user .nav-signup-button,
+.role--admin .nav-login-button,
+.role--admin .nav-signup-button{
+    display: none;
+}
 .nav-list li {
     margin: 0 10px;
     font-family: 'Orbitron', sans-serif;
@@ -61,6 +70,59 @@ body {
     font-family: 'Orbitron', sans-serif;
 
 }
+
+/* ============ ADMIN,USER =============== */
+.role--admin .nav-admin-button,
+.role--user .nav-user-button,
+.role--admin .nav-update-button {
+    display: flex;
+}
+
+.nav-update-button,
+.nav-user-button,
+.nav-admin-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.nav-user-button img,
+.nav-admin-button img{
+    width: 30px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+.nav-user-button:hover .subnav-user,
+.nav-admin-button:hover .subnav-admin {
+    display: block;
+}
+.subnav-user,
+.subnav-admin {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: -30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 150px;
+    list-style-type: none;
+}
+.subnav-item--user,
+.subnav-item--admin {
+    text-align: right;
+    padding-right: 14px;
+    text-shadow: none;
+    color: rgba(255, 255, 255,0.9);
+}
+.subnav-item--user:hover a,
+.subnav-item--admin:hover a{
+    color: rgba(255, 255, 255,0.6);
+}
+
+
+
+
+
+
 .nav-button:hover {
     cursor: pointer;
     text-shadow: 2px 2px var(--button-color);

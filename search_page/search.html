@@ -16,13 +16,15 @@
 
 </head>
 <body>
-    <div id="main">
+    <div id="main" class="main">
         <div id="header">
             <!-- NAVIGATION LIST -->
-            <ul class="nav-list">
+            <ul class="nav-list ">
                 <li class="nav-logo">
                     <a href="../index.html"><img class="nav-logo-image" src="../assets/image/logo/seven.png" alt="Logo"></a>
                 </li>
+
+                <!-- guest,user -->
                 <li class="nav-button nav-button-sub">
                     Browse
                     <ul class="subnav">
@@ -33,21 +35,60 @@
                         <div class="subnav-line"></div>
                     </ul>
                 </li>
+
+                <!-- ADMIN -->
+                <li class="nav-button nav-update-button">Upload game
+                    <i class="ti-upload"></i>
+                </li>
+
             </ul>
             
             <ul class="nav-list">
                 <li class="nav-search-input">
-                    <input id="nav-search-input--input" type="text" placeholder="Type something ...">
+                    <input id="nav-search-input--input" type="text" placeholder="Search game ...">
                 </li>
                 <li class="nav-search-button">
-                    <a href="./search.html" class="nav-search-icon"><i class="ti-search"></i></a>
+                    <a href="../search_page/search.html" class="nav-search-icon"><i class="ti-search"></i></a>
                 </li>
+
+                <!-- GUEST -->
                 <li class="nav-button">
                     <a href="../login_signup_page/login.html" class="nav-login-button">Log in</a>
                 </li>
                 <li class="nav-button">
                     <a href="../login_signup_page/login.html" class="nav-signup-button">Sign up</a>
                 </li>
+                <!-- ADMIN,USER -->
+                <li class="nav-button nav-admin-button">
+                    <a href="./" class="nav-admin-button">
+                        <img src="../assets/image/users_avatar/avatar1.jpg" alt="Admin"> 
+                        Admin
+                    </a>
+                    <ul class="subnav-admin">
+                        <li class="subnav-item--admin">
+                            <a href="./">Admin page</a>
+                        </li>
+                        <li class="subnav-item--admin">
+                            <a href="../login_signup_page/login.html" onclick="localStorage.setItem('localRole',0)" >Sign out</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-button nav-user-button">
+                    <a href="./" class="nav-user-button">
+                        <img src="../assets/image/users_avatar/avatar1.jpg" alt="User"> 
+                        User
+                    </a>
+                    <ul class="subnav-user">
+                        <li class="subnav-item--user">
+                            <a href="./">User page</a>
+                        </li>
+                        <li class="subnav-item--user">
+                            <a href="../login_signup_page/login.html" onclick="localStorage.setItem('localRole',0)" >Sign out</a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     

@@ -4,7 +4,13 @@ const $c = document.getElementsByClassName.bind(document);
 const $i = document.getElementById.bind(document);
 
 var gameIdStorage = 1;
+var localRole = localStorage.getItem('localRole');
 
+if (localRole =='admin'){
+    $(".main").classList.add("role--admin");
+}else if (localRole =='user'){
+    $(".main").classList.add("role--user");
+}
 //////////// Sub Navigation List ///////////
 const subnavItems = $$(".subnav-item");
 const subnavItemActived = $(".nav-button-sub .subnav-item.subnav-active");

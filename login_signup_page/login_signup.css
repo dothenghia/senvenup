@@ -112,7 +112,7 @@
 }
 
 .form-heading {
-    padding: 30px;
+    padding: 30px 30px 30px 30px;
     font-size: 24px;
     font-weight: 500;
     color: #fff;
@@ -123,6 +123,7 @@
     padding: 0 30px 30px 30px;
 }
 
+
 .form-input {
     height: 48px;
     margin-bottom: 20px;
@@ -131,7 +132,19 @@
     border: 2px solid #fff;
 
 }
+.form-incorrect .form-input {
+    border: 2px solid rgb(184, 17, 17);
 
+}
+.form-message {
+    display: none;
+    color: red;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.form-incorrect .form-message {
+    display: block;
+}
 .form-control {
     height: 100%;
     width: 100%;
@@ -141,23 +154,25 @@
     border: none;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
-
-    
-
 }
-
+.form-submit-button {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
 .form-login-signup {
     width: 100%;
-    height: 50px;
-    border: none;
+    line-height: 50px;
+    text-decoration: none;
     background-color: var(--button-color);
-    opacity: 0.9;
+    opacity: 0.8;
     border-radius: 4px;
     font-size: 20px;
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 .form-login-signup:hover {
     cursor: pointer;
